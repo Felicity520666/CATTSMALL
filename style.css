@@ -1,3 +1,7 @@
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
 body {
     background-color: lightcoral;
     text-align: center;
@@ -6,6 +10,8 @@ body {
 h1 {
     color: mediumpurple;
     font-family:fantasy;
+    font-size: 45px;
+    text-shadow: 2px 2px 5px white, 0 0 20px lavender;
 }
 
 p {
@@ -16,4 +22,48 @@ p {
 
 img {
     width: 50%;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 70%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+a {
+    color: white;
+    background-color: mediumpurple;
+    padding: 10px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    background-color: plum;
+    color: purple;
 }
